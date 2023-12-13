@@ -29,9 +29,6 @@ public class SellerConsumer {
 
     public void removeCar(String model){
         Car car = new Car(model);
-        if(localCars.contains(car)){
-            localCars.remove(car);
-        }
         producer.sendNotifSelling(car, 1);
     }
 
